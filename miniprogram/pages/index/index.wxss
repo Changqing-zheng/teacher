@@ -1,0 +1,9 @@
+.btn{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.list{
+  display: block;
+  margin-bottom: 50px;
+}

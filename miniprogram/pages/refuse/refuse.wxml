@@ -1,0 +1,9 @@
+<van-cell title="面试人姓名" value="{{detail[0].person}}" />
+<van-cell title="面试公司" value="{{detail[0].company}}" />
+<van-cell title="面试时间" value="{{detail[0].date}}" />
+<van-cell title="面试方式" value="{{detail[0].way}}" />
+<van-cell title="面试轮次" value="{{detail[0].time}}" />
+<van-cell title="当前状态" value="{{detail[0].state}}" class="last" />
+
+<van-button type="danger" class="btn" bindtap="refuse" >拒绝</van-button>
+<van-button type="primary" class="btn" bindtap="agree">同意</van-button>

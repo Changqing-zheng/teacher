@@ -1,0 +1,13 @@
+<van-cell-group>
+  <van-cell 
+  title="{{item.person}}的面试申请" 
+  value="{{item.date}}" 
+  label="应聘公司:{{item.company}}, 面试方式:{{item.way}}, 面试轮次:{{item.time}}" 
+  border="{{ true }}"
+  wx:for="{{interviewList}}"
+  wx:key="{{index}}"
+  class="list"
+  data-interviewId="{{item._id}}"
+  bindtap="toRefuse" />
+</van-cell-group>
+<van-button type="info" size="large" class="btn" bindtap='toPublish'>发布项目</van-button>

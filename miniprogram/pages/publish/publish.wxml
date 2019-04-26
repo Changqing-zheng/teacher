@@ -1,0 +1,27 @@
+<van-cell-group>
+  <van-field
+    value="{{ name }}"
+    label="项目名称"
+    placeholder="请输入项目名称"
+    border="{{ true }}"
+    bind:change="getName"
+  />
+
+  <van-field
+    value="{{ msg }}"
+    label="项目详情"
+    placeholder="请输入项目详情"
+    border="{{ true }}"
+    bind:change="getMsg"
+  />
+
+  <van-field
+    value="{{ skill }}"
+    label="所需技术"
+    placeholder="请输入所需技术"
+    border="{{ true }}"
+    bind:change="getSkill"
+  />
+</van-cell-group>
+
+<van-button type="info" size="large" bindtap="publish">确认发布</van-button>
