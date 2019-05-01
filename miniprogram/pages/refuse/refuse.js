@@ -8,7 +8,8 @@ Page({
    */
   data: {
     detail: [],
-    thisId: ""
+    thisId: "",
+    reason: ''
   },
   onLoad: function (options) {
     this.setData({
@@ -29,14 +30,14 @@ Page({
   refuse(event){
     applyList.doc(this.data.thisId).update({
       data: {
-        state: "已拒绝"
+        state: "已拒绝",
+        reason: this.data.reason
       }
     })
     .then(res => {
       wx.showToast({
         title: '修改成功',
       })
-      console.log(res)
     })
     .catch(error => {
       console.log(error)
@@ -56,6 +57,11 @@ Page({
     })
     .catch(error => {
       console.log(error)
+    })
+  },
+  getReason(event){
+    this.setData({
+      reason: event.detail
     })
   }
 })

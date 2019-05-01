@@ -3,7 +3,23 @@
 <van-cell title="面试时间" value="{{detail[0].date}}" />
 <van-cell title="面试方式" value="{{detail[0].way}}" />
 <van-cell title="面试轮次" value="{{detail[0].time}}" />
-<van-cell title="当前状态" value="{{detail[0].state}}" class="last" />
-
+<van-cell title="当前状态" value="{{detail[0].state}}" />
+<!-- <van-field
+    value="{{ reason }}"
+    label="拒绝理由"
+    placeholder="{{detail[0].reason}}"
+    border="{{ true }}"
+    class="last"
+    type="textarea"
+    autosize
+    bind:click="getReason"
+  /> -->
+  <van-field
+    label="拒绝理由"
+    value="{{ reason }}"
+    placeholder="{{detail[0].reason}}"
+    border="{{ true }}"
+    bind:change="getReason"
+  />
 <van-button type="danger" class="btn" bindtap="refuse" >拒绝</van-button>
 <van-button type="primary" class="btn" bindtap="agree">同意</van-button>
